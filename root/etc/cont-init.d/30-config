@@ -1,0 +1,21 @@
+#!/usr/bin/with-contenv bash
+
+# copy cronjob to /config
+[[ ! -e /config/backup ]] && \
+cp /defaults/backup /config/backup
+
+# set user repo
+if [[ -z $USER_REPO ]]; then
+USER_REPO="linuxserver"
+fi
+
+sed -i "s/REPO_USER=\".*\"/REPO_USER=\"${USER_REPO}\"/g" /defaults/script.sh
+
+# set cron job
+crontab /config/backup
+
+# permissions
+chown -R abc:abc \
+	/config
+chown abc:abc \
+	/backup
