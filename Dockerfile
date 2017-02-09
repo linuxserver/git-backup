@@ -1,4 +1,4 @@
-FROM lsiobase/alpine
+FROM lsiobase/alpine:3.5
 MAINTAINER sparklyballs
 
 # install packages
@@ -7,7 +7,7 @@ RUN \
 	curl \
 	findutils \
 	git \
-	python
+	python2
 
 # add local files
 COPY root/ /
