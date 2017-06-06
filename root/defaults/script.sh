@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set variables
-unset FOLDER_DATE FOLDER_MAKE REPO_USER
+unset FOLDER_DATE FOLDER_MAKE
 FOLDER_DATE=$(date '+%d-%b-%Y')
 FOLDER_MAKE="/backup/${FOLDER_DATE}"
 REPO_USER=${REPO_USER:-linuxserver}
