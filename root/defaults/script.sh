@@ -7,7 +7,9 @@ FOLDER_MAKE="/backup/${FOLDER_DATE}"
 REPO_USER=${REPO_USER:-linuxserver}
 
 # delete folders older than 20 days
-for i in $(find /backup/ -maxdepth 1 -type d -mtime +20 -print); do echo -e "Deleting directory $i";rm -rf $i; done
+for i in $(find /backup/ -maxdepth 1 -type d -mtime +20 -print); do
+echo -e "Deleting directory $i";rm -rf $i
+done
 
 # make today's folders
 if [ -d "${FOLDER_MAKE}" ]; then

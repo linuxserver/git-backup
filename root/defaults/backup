@@ -1,2 +1,2 @@
-21 02 * * * /bin/sh /defaults/script.sh
+21 02 * * * /bin/bash /defaults/script.sh
  
